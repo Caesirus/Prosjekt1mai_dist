@@ -239,18 +239,33 @@ body {
   min-height: 100vh;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+/* FOOTER – GLASSMORPHISM */
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 14px;
+
+    /* Glassmorphism */
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    border: 1px solid rgba(200, 200, 200, 0.35);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+
+    width: 90%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-footer {
-  margin-top: auto;
-}
-
-
-
-footer {
-  margin-top: auto;
+/* Mobil: sørg for at footeren alltid er nederst */
+@media (max-width: 600px) {
+    footer {
+        order: 5;      /* legger footeren nederst i flex-rekkefølgen */
+        width: 100%;
+        border-radius: 12px;
+    }
 }
