@@ -6,24 +6,25 @@
 
 /* BODY */
 body {
-    background-color: red; /* eller gradienten din */
+    background-color: #f2f4f7;
     margin: 20px;
+    font-family: 'Inter', sans-serif;
 }
 
 /* TOPPBANNER */
 #topbanner {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.25); /* Lys glass-effekt */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: 18px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(200, 200, 200, 0.35);
     padding: 25px 30px;
     width: 90%;
     max-width: 800px;
     margin: 40px auto 20px auto;
     text-align: center;
-    color: white;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    color: #1f2d3d; /* Mørk tekst */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
     animation: fadeIn 0.8s ease forwards;
     opacity: 0;
 }
@@ -32,29 +33,32 @@ body {
     font-size: clamp(1.2rem, 4vw, 1.8rem);
     margin-bottom: 10px;
     font-weight: 700;
+    color: #2f5f9a; /* Blå aksent */
 }
 
+/* RESULTBOX */
 .resultBox {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(200, 200, 200, 0.35);
     padding: 15px 20px;
     margin: 10px auto;
     width: 90%;
-    max-width: 350px;
+    max-width: 380px;
     text-align: center;
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+    color: #1f2d3d;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* Desktop: plasser intro-teksten visuelt inni glassboksen */
+/* INTROTEXT */
 #topbanner + #introtext {
-    max-width: 800px;      /* samme bredde som glassboksen */
-    margin: -10px auto 20px auto; /* trekker den opp i boksen */
-    padding: 0 30px;       /* matcher toppbanner-padding */
+    max-width: 800px;
+    margin: -10px auto 20px auto;
+    padding: 0 30px;
     text-align: center;
-    color: white;
+    color: #1f2d3d;
 }
 
 @keyframes fadeIn {
@@ -64,23 +68,26 @@ body {
 
 /* KALKULATOR */
 #calculator {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(200, 200, 200, 0.35);
     padding: 25px;
     width: 320px;
     margin: 40px auto;
     text-align: center;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    color: #1f2d3d;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
 #calculator h2 {
     font-size: clamp(1.2rem, 4vw, 1.6rem);
     margin-bottom: 10px;
+    color: #2f5f9a;
 }
 
+/* INPUT + BUTTON */
 input, button {
     font-size: clamp(1rem, 3.5vw, 1.2rem);
     padding: 8px 12px;
@@ -90,19 +97,32 @@ input, button {
     border: none;
 }
 
-button {
+/* INPUT */
+input {
     background-color: #ffffff;
+    color: #1f2d3d;
+    border: 1px solid #dcdcdc;
+}
+
+/* KNAPPER */
+button {
+    background: linear-gradient(135deg, #3a7ca5, #6b5bff); /* Blå-blank gradient */
+    color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(58, 124, 165, 0.3);
 }
 
 button:hover {
-    background-color: #e0e0e0;
+    background: linear-gradient(135deg, #6b5bff, #3a7ca5);
+    box-shadow: 0 0 12px rgba(107, 91, 255, 0.6);
 }
 
+/* RESULT */
 #result {
-    margin-top: 15px;
-    font-weight: bold;
+    letter-spacing: -0.3px;
+    word-spacing: -1px;
 }
 
 /* STOR PROSENT */
@@ -111,26 +131,28 @@ button:hover {
     font-weight: bold;
     display: inline-block;
     margin-top: 10px;
+    color: #2f5f9a;
 }
 
 /* LOVBOKS */
 #lovboks {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(200, 200, 200, 0.35);
     padding: 20px;
     width: 90%;
     max-width: 700px;
     margin: 30px auto;
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+    color: #1f2d3d;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
     text-align: center;
 }
 
 /* LOVTEKST */
 #lovtekst {
-    color: white;
+    color: #1f2d3d;
     font-size: clamp(0.85rem, 3vw, 1.1rem);
     width: 90%;
     max-width: 600px;
@@ -151,9 +173,8 @@ button:hover {
     margin-top: 5px;
 }
 
-/* MOBILRESPONSIVITET + REKKEFØLGE */
+/* MOBILRESPONSIVITET */
 @media (max-width: 600px) {
-
     body {
         margin: 0;
         padding: 0 10px;
@@ -184,7 +205,7 @@ button:hover {
         padding: 0 10px;
         max-width: 600px;
         text-align: center;
-        color: white;
+        color: #1f2d3d;
         margin-top: 0;
     }
 
@@ -195,25 +216,18 @@ button:hover {
     }
 }
 
-/* ANNONSEPLASSERING START */
-
+/* ANNONSEPLASSERING */
 .ad-left, .ad-right {
-    width: 160px; /* eller 300px hvis du vil ha større */
+    width: 160px;
     position: fixed;
     top: 120px;
 }
 
-.ad-left {
-    left: 20px;
-}
-
-.ad-right {
-    right: 20px;
-}
+.ad-left { left: 20px; }
+.ad-right { right: 20px; }
 
 @media (max-width: 900px) {
     .ad-left, .ad-right {
-        display: none; /* skjul på mobil */
+        display: none;
     }
 }
-/* ANNONSEPLASSERING SLUTT */
