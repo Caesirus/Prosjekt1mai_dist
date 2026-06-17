@@ -6,7 +6,7 @@ self.addEventListener('install', event => {
         './index.html',
         './style.css',
         './script.js',
-        './kalkulator.png'
+        './images/stort.png'
       ]);
     })
   );
