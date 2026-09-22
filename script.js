@@ -1,1 +1,45 @@
-const a0_0x542a87=a0_0x328e;(function(_0x3fa326,_0x358e6e){const _0x36ab77=a0_0x328e,_0x52b940=_0x3fa326();while(!![]){try{const _0x5f1e42=parseInt(_0x36ab77(0xa0))/0x1+parseInt(_0x36ab77(0x96))/0x2*(parseInt(_0x36ab77(0x94))/0x3)+parseInt(_0x36ab77(0xaa))/0x4*(-parseInt(_0x36ab77(0xa5))/0x5)+-parseInt(_0x36ab77(0x9e))/0x6+-parseInt(_0x36ab77(0x97))/0x7*(-parseInt(_0x36ab77(0x98))/0x8)+parseInt(_0x36ab77(0xa1))/0x9*(parseInt(_0x36ab77(0xa7))/0xa)+parseInt(_0x36ab77(0xa8))/0xb;if(_0x5f1e42===_0x358e6e)break;else _0x52b940['push'](_0x52b940['shift']());}catch(_0x28b8d2){_0x52b940['push'](_0x52b940['shift']());}}}(a0_0xeb0e,0x706a7),document[a0_0x542a87(0xac)](a0_0x542a87(0xa9))[a0_0x542a87(0x8f)](a0_0x542a87(0x93),function(_0x4a0fe4){const _0x2904f0=a0_0x542a87;_0x4a0fe4[_0x2904f0(0x9d)]===_0x2904f0(0xa6)&&calculatePercentage();}));function calculatePercentage(){const _0x29f050=a0_0x542a87,_0x44f4e0=parseFloat(document[_0x29f050(0xac)](_0x29f050(0xa9))[_0x29f050(0x90)]);if(isNaN(_0x44f4e0)||_0x44f4e0<=0x0){document[_0x29f050(0xac)](_0x29f050(0x9c))[_0x29f050(0x92)]=_0x29f050(0x91);return;}const _0x18ec56=1747.2,_0xdb3b9f=0x736,_0x3aa207=0x79e,_0x1d0b7c=_0x44f4e0/_0x18ec56*0x64,_0x3640dc=_0x44f4e0/_0xdb3b9f*0x64,_0x3c16be=_0x44f4e0/_0x3aa207*0x64;document[_0x29f050(0xac)]('result')[_0x29f050(0x9f)]=_0x29f050(0x9a)+_0x1d0b7c[_0x29f050(0xab)](0x2)+_0x29f050(0xa2)+_0x3640dc[_0x29f050(0xab)](0x2)+_0x29f050(0xa3)+_0x3c16be[_0x29f050(0xab)](0x2)+_0x29f050(0x95);}a0_0x542a87(0x9b)in navigator&&navigator[a0_0x542a87(0x9b)][a0_0x542a87(0x99)](a0_0x542a87(0xa4));function a0_0x328e(_0x4716ff,_0x297e22){_0x4716ff=_0x4716ff-0x8f;const _0xeb0e86=a0_0xeb0e();let _0x328e1e=_0xeb0e86[_0x4716ff];return _0x328e1e;}function a0_0xeb0e(){const _0x3d9988=['innerText','keypress','435AVhwhx','\x20%</span>\x0a\x20\x20\x20\x20</div>\x0a','6246iwoLYe','35CAZNCa','314384EsMRAj','register','\x0a\x20\x20\x20\x20<div\x20class=\x22resultBox\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<strong>33,6\x20t/uke<br>(årstimer\x201747,2):</strong><br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22bigPercent\x22>','serviceWorker','result','key','4466082FgUnWL','innerHTML','434393MVDVnG','322659bIVvze','\x20%</span>\x0a\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20<div\x20class=\x22resultBox\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<strong>35,5\x20t/uke\x20(årstimer\x201846):</strong><br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22bigPercent\x22>','\x20%</span>\x0a\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20<div\x20class=\x22resultBox\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<strong>37,5\x20t/uke\x20(årstimer\x201950):</strong><br>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22bigPercent\x22>','./service-worker.js','598720rYqZkA','Enter','30GCUClc','8051945QyVmKC','hoursInput','24tqlvYT','toFixed','getElementById','addEventListener','value','Skriv\x20inn\x20et\x20gyldig\x20antall\x20timer.'];a0_0xeb0e=function(){return _0x3d9988;};return a0_0xeb0e();}
+// Kjør beregning når brukeren trykker Enter
+document.getElementById("hoursInput").addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        calculatePercentage();
+    }
+});
+
+function calculatePercentage() {
+    const hours = parseFloat(document.getElementById("hoursInput").value);
+
+    if (isNaN(hours) || hours <= 0) {
+        document.getElementById("result").innerText = "Skriv inn et gyldig antall timer.";
+        return;
+    }
+
+    const year336 = 1747.2; // 33,6 t/uke
+    const year355 = 1846;   // 35,5 t/uke (fra HTA-tabellen)
+    const year375 = 1950;   // 37,5 t/uke
+
+    const percent336 = (hours / year336) * 100;
+    const percent355 = (hours / year355) * 100;
+    const percent375 = (hours / year375) * 100;
+
+    document.getElementById("result").innerHTML = `
+    <div class="resultBox">
+        <strong>33,6 t/uke<br>(årstimer 1747,2):</strong><br>
+        <span class="bigPercent">${percent336.toFixed(2)} %</span>
+    </div>
+
+    <div class="resultBox">
+        <strong>35,5 t/uke (årstimer 1846):</strong><br>
+        <span class="bigPercent">${percent355.toFixed(2)} %</span>
+    </div>
+
+    <div class="resultBox">
+        <strong>37,5 t/uke (årstimer 1950):</strong><br>
+        <span class="bigPercent">${percent375.toFixed(2)} %</span>
+    </div>
+`;
+}
+
+// appvisning for mobil:
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./service-worker.js');
+}
